@@ -6,3 +6,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+nav {
+    height: 80px;
+    background: red;
+    display: flex;
+}
