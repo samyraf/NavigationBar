@@ -5,13 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Responsive Navigation Menu</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
     </head>
     <body>
-        <nav>
+        <nav> <!--toda nav bar-->
+            <!--nav bar-->
             <div class="logo">Brand</div>
-            <ul>
-                <li><a href="#">Home</a></li>
+
+            <!--check para ativar o menu-->
+            <input type="checkbox" id="click">
+
+            <!--icone para menu responsivo -->
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <!--lista/menu-->
+            <ul> 
+                <li><a class="active" href="#">Home</a></li> <!--opcoes-->
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Gallery</a></li>

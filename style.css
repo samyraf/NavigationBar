@@ -10,8 +10,18 @@
 /* mexendo na nav */
 nav {
     height: 80px; /* definindo altura da navbar */
-    background: red; /* cor da navbar */
+    background: #1b1b1b; /* cor da navbar */
     display: flex; /* logo e menu - lado a lado */
+    align-items: center; /* alinhando texto p/ centro - sentido vertical */
+    justify-content: space-between; /* implementando um espaçamento igual entre a logo e a lista de menu */ 
+    padding: 0px 50px 0px 100px; /* definindo espaçamento da logo de 100px a direita da margem + menu 50px a esquerda da margem */
+}
+
+/* mexendo na logo */
+nav .logo {
+    font-size: 33px; /* definindo o tamanho */
+    color: #fff; /* setando a cor */
+    font-weight: 600; /* definindo grossura da fonte */
 }
 
 /* mexendo na lista toda */
@@ -20,4 +30,85 @@ nav ul {
     list-style: none; /* remove as bolinhas dos itens da lista/menu */
 }
 
+/* mexendo nos itens da lista */
+nav ul li {
+    margin: 0 5px; /* definindo distancia entre os itens da lista*/
+}
 
+/* mexendo especificamente no link em casa item da lista toda */
+nav ul li a {
+    color: #fff; /* setando a cor para todos os itens*/ 
+    text-decoration: none; /* removendo linha debaixo de cada item */
+    font-weight: 500; /* definindo grossura da fonte */
+    letter-spacing: 1px; /* definindo espaçamento entre as letras de cada item */
+    padding: 8px 10px; /* definindo espaçamento interno - vertical e horizontal*/
+    border-radius: 5px; /* deixando bordas arredondadas */
+    transition: all 0.3s ease; /* transição p/ mudança do hover */
+} 
+
+/* mudanças quando o mouse passar/estiver em cima e sempre p/ o item home */ 
+nav ul li a:hover,
+nav ul li a.active {
+    color: #1b1b1b; /* setando a cor para todos os itens*/ 
+    background: #fff; /* definindo cor de fundo */
+}
+
+/* icone menu responsivo */
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+/* fazendo responsividade da navbar */
+
+@media (max-width: 940px) { /* a mudança ocorre quando a tela for <= 940px */
+    nav .menu-btn i {
+        display: block;
+        margin-right: 30px;
+    }
+
+    #click:checked ~ .menu-btn i:before {
+        content: "\f00d"; /* colocando 'x' depois do menu aberto */
+    } 
+
+    nav {
+        padding: 0px 00px 0px 50px; /* definindo espaçamento da logo de 100px a direita da margem + menu 50px a esquerda da margem */
+    }
+    
+    nav ul {
+        position: fixed; /* setando que o menu fique fixo em um local */
+        top: 80px; /* distancia do menu do topo */
+        right: -100%; /* retitando a distancia do menu com a margem esquerda */
+        background: #111; /* definindo cor de fundo */
+        height: 100vh; /* setando o tamanho do menu p/ preencher o resto da tela toda*/
+        width: 100%; /* setando para cobrir a tela toda*/
+        display: block; /* setando para os itens ficarem um em baixo do outro*/
+        text-align: center; /* alinahndo todo o menu p/ o centro - horizontal */
+        transition: all 0.3s ease;
+    }
+
+    #click:checked ~ ul {
+        right: 0%;
+    }
+    
+    nav ul li {
+        margin: 40px 0; /* expaçamento vertical entre os itens */
+    }
+
+    nav ul li a {
+        font-size: 25px;
+        display: block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: cyan; /* setando a cor para todos os itens*/ 
+        background: none; /* retirando background */
+    }
+}
