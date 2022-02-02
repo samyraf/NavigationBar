@@ -7,8 +7,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* mexendo na nav */
 nav {
     height: 80px; /* definindo altura da navbar */
     background: red; /* cor da navbar */
-    display: flex; /* logo e elementos do menu - lado a lado */
+    display: flex; /* logo e menu - lado a lado */
 }
+
+/* mexendo na lista toda */
+nav ul {
+    display: flex; /* elementos do menu - lado a lado */
+    list-style: none; /* remove as bolinhas dos itens da lista/menu */
+}
+
+
